@@ -1,0 +1,13 @@
+<StackLayout>
+  <ListView [items]="stocks" class="list-group" height="86%">
+    <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+      <ScrollView height="100%">
+        <StackLayout orientation="horizontal" height="100%" (tap)="onTap(item)">
+          <Label [text]="item.symbol" class="list-group-item" height="40"></Label>   
+          <br><br><br>
+          <Label [text]="item.name" class="list-group-item" height="40"></Label>              
+        </StackLayout>
+      </ScrollView>
+    </ng-template>
+</ListView>
+</StackLayout>

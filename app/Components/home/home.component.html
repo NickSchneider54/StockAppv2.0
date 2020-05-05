@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<StackLayout class="p-20">
+    <DockLayout stretchLastChild="true">
+        <Button dock="bottom" text="Favorites" (tap)="routeFavorites()"></Button>
+    </DockLayout>
+    <DockLayout class="searchBar" 
+    stretchLastChild="true">
+        <SearchBar dock="top"
+        hint="Enter search term here ..."
+        [text]="searchPhrase" (textChange)="onTextChanged($event)" 
+        (clear)="onClear($event)" (submit)="onSubmit($event)">
+    </SearchBar>
+    </DockLayout>
+    <StackLayout class="results"
+    height="500">
+        <app-searchresults *ngIf="stocks.length" [stocks]="stocks"></app-searchresults>
+    </StackLayout>
+    
+</StackLayout>

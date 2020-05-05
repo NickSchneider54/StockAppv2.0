@@ -1,0 +1,39 @@
+<StackLayout class="p-20" class="bg" height="100%">
+
+    <ScrollView height="100%">    
+      <StackLayout height="100%" class="page">
+        <DockLayout stretchLastChild="true" height="80">
+          <Label dock="top" [text]="stock.symbol"></Label>
+          
+        </DockLayout>
+        <ScrollView>
+            <StackLayout class="stockDetails">
+
+                <StackLayout orientation="horizontal">
+                  <Label text="Price:"></Label>
+                  <Label [text]="stock.price"></Label>
+                </StackLayout>
+                
+                <StackLayout orientation="horizontal">
+                  <Label text="Percent of Change:"></Label>
+                  <Label [text]="stock.poc"></Label>
+                </StackLayout>
+
+                <StackLayout orientation="horizontal">
+                  <Label text="High:"></Label>
+                  <Label [text]="stock.high"></Label>
+                </StackLayout>
+
+                <StackLayout orientation="horizontal">
+                  <Label text="Low:"></Label>
+                  <Label [text]="stock.low"></Label>
+                </StackLayout>    
+                
+                <Button text="Add to Favorites" (tap)="addFavorites()"></Button>         
+            </StackLayout>
+        </ScrollView>
+        
+      </StackLayout>
+    </ScrollView>
+    
+  </StackLayout>
